@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class AuthForm extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -51,29 +52,35 @@ public class AuthForm extends JFrame {
 		contentPane.setLayout(null);
 		
 		loginField = new JTextField();
+		loginField.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		loginField.setBounds(101, 74, 118, 20);
 		contentPane.add(loginField);
 		loginField.setColumns(10);
 		
-		labelAuth = new JLabel("\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F");
+		labelAuth = new JLabel("Авторизация");
+		labelAuth.setFont(new Font("Times new roman", Font.PLAIN, 11));
 		labelAuth.setHorizontalAlignment(SwingConstants.CENTER);
 		labelAuth.setBounds(31, 30, 188, 14);
 		contentPane.add(labelAuth);
 		
-		labelLogin = new JLabel("\u041B\u043E\u0433\u0438\u043D:");
+		labelLogin = new JLabel("Логин:");
+		labelLogin.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		labelLogin.setBounds(31, 77, 60, 14);
 		contentPane.add(labelLogin);
 		
-		labelPassword = new JLabel("\u041F\u0430\u0440\u043E\u043B\u044C:");
+		labelPassword = new JLabel("Пароль:");
+		labelPassword.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		labelPassword.setBounds(31, 108, 60, 14);
 		contentPane.add(labelPassword);
 		
 		JLabel labelMessages = new JLabel("");
+		labelMessages.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		labelMessages.setHorizontalAlignment(SwingConstants.CENTER);
 		labelMessages.setBounds(31, 55, 188, 14);
 		contentPane.add(labelMessages);
 		
-		JButton buttonAuth = new JButton("\u0412\u0445\u043E\u0434");
+		JButton buttonAuth = new JButton("Вход");
+		buttonAuth.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		buttonAuth.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (loginField.getText().equals("1") && passwordField.getText().equals("1")) 
@@ -97,7 +104,8 @@ public class AuthForm extends JFrame {
 		buttonAuth.setBounds(31, 136, 89, 23);
 		contentPane.add(buttonAuth);
 		
-		JButton buttonExit = new JButton("\u0412\u044B\u0445\u043E\u0434");
+		JButton buttonExit = new JButton("Выход");
+		buttonExit.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		buttonExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -107,6 +115,7 @@ public class AuthForm extends JFrame {
 		contentPane.add(buttonExit);
 		
 		passwordField = new JTextField();
+		passwordField.setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		passwordField.setBounds(101, 105, 118, 20);
 		contentPane.add(passwordField);
 		passwordField.setColumns(10);
